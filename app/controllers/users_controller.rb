@@ -23,15 +23,16 @@ class UsersController < ApplicationController
   end
 
   def create
-@user = User.create(user_params)
+@user = User.new(params[:user])
      
     if @user.save
       redirect_to users_path
     else
-      render :users
+      render :new
     end
 end
-
+  
+ 
   def edit
     @user=User.find(params[:id])
     post_params=params.require(:user).permit(:first_name, :last_name, :description, :email, :age, :password, :city_id)
