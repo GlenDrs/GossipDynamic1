@@ -1,0 +1,16 @@
+<h1> The page of the user</h1>
+<div class="d-flex flex-column">
+<h3>The first name:</h3>
+  <div class="p-2"><%= @user.first_name %></div>
+<h3>The last name:</h3>
+  <div class="p-2"><%= @user.last_name %></div>
+<h3>His discription:</h3>
+  <div class="p-2"><%= @user.description %></div>
+ <h3>His email:</h3>
+  <div class="p-2"><%= @user.email %></div> 
+  <h3>His age:</h3>
+  <div class="p-2"><%= @user.age %></div>
+
+  <h3>The city's author name is:</h3>
+  <div class="p-2"><%= City.find(@user.city_id).name %></div>
+  </div>

@@ -1,0 +1,18 @@
+
+<h2> The page of gossips</h2>
+ 
+<div class="d-flex flex-column">
+<h3>we have the title</h3>
+  <div class="p-2">
+  <%= @gossip.title %>
+  </div>
+  <h3>the content is:</h3>
+  <div class="p-2"><%= @gossip.content %>
+  </div>
+  <div class="p-2"></div>
+  <h3>The author of the gossip is:</h3>
+  <div class="p-2"><%= User.find(@gossip.user_id).first_name %></div>
+ <h3>The city's author name is:</h3>
+  <div class="p-2"><%= City.find(@gossip.user_id).name %></div>
+
+</div>

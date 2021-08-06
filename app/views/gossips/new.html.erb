@@ -1,0 +1,16 @@
+  <!--   <div class="formulair">   -->
+<h2> The form of 'new' gossip </h2> 
+
+<%= form_for url_for(new_gossip_path), method: "post" do |frm| %>
+
+    <div>
+			<label> The title of your Gossip </label>
+    	<%= frm.text_field :title %>
+    </div>
+    <div>
+			<label> The content of your Gossip </label>
+    	<%= frm.text_area :content, class: 'form-control' %>
+    </div>
+    <br />
+      <%= frm.submit "Lancer la rumeur monsieur Choubdnarg" %>
+<% end %>

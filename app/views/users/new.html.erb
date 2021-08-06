@@ -1,0 +1,36 @@
+<h2>The User inscription </h2>
+
+
+
+<%= form_tag new_user_path(action: "create"), method: "post" do %>
+        <%= label_tag "First name:" %> 
+        <%= text_field_tag :first_name %>
+        <br /> <br />
+
+<%= label_tag "Last name:" %> 
+        <%= text_field_tag :last_name %>
+        <br /> <br />
+
+        <%= label_tag "description:" %> 
+        <%= text_field_tag :description %>
+        <br /> <br />
+
+        <%= label_tag "email:" %> 
+        <%= text_field_tag :email %>
+        <br /> <br />
+
+        <%= label_tag "age:" %> 
+        <%= number_field_tag :age %>
+        <br /> <br />
+
+        <%= label_tag "City Id:" %> 
+        <%= number_field_tag :city_id %>
+        <br /> <br />
+
+        <%= label_tag "Password:" %> 
+        <%= password_field "password", :password %>
+        <br /> <br />
+
+        <%= submit_tag "Signe Up" %>
+
+         <% end %>
